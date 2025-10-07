@@ -1,0 +1,7 @@
+{
+  "name": "Speed Math",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "react-vite"
+}
