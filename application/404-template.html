@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Ionic App</title>
+    <meta name="description" content="Redirecting to main app..." />
+    
+    <!-- GitHub Pages SPA redirect script -->
+    <script type="text/javascript">
+      // Single Page Apps for GitHub Pages
+      // MIT License
+      // This script takes the current URL and converts the path and query
+      // string into just a query string, and then redirects the browser
+      // to the new URL with just a query string and hash fragment,
+      // e.g., https://www.foo.tld/one/two?a=b&c=d#qwe becomes
+      // https://www.foo.tld/?/one/two&a=b~and~c=d#qwe
+      // Note: this 404.html file must be at least 512 bytes for it to work
+      // with Internet Explorer (it is currently > 512 bytes)
+
+      // If you're creating a Project Pages site and NOT using a custom domain,
+      // then set pathSegmentsToKeep to 1 (enterprise users may need to set it to > 1).
+      // This way the code will only replace the route part and not the real directory.
+      // For example, if your GitHub Pages URL is https://username.github.io/repo-name/,
+      // then set pathSegmentsToKeep to 1 so that paths like
+      // https://username.github.io/repo-name/one/two will redirect to
+      // https://username.github.io/repo-name/?/one/two instead of
+      // https://username.github.io/?/repo-name/one/two
+
+      var pathSegmentsToKeep = 1;
+
+      var l = window.location;
+      l.replace(
+        l.protocol + '//' + l.hostname + (l.port ? ':' + l.port : '') +
+        l.pathname.split('/').slice(0, 1 + pathSegmentsToKeep).join('/') + '/?/' +
+        l.pathname.slice(1).split('/').slice(pathSegmentsToKeep).join('/').replace(/&/g, '~and~') +
+        (l.search ? '&' + l.search.slice(1).replace(/&/g, '~and~') : '') +
+        l.hash
+      );
+    </script>
+  </head>
+  <body>
+    <!-- IE requires at least 512 bytes of content for custom error pages -->
+    <div style="display: none;">
+      This page is used to handle client-side routing for Single Page Applications deployed on GitHub Pages.
+      It automatically redirects users from 404 errors back to the main application with the correct routing information.
+      This ensures that direct links to application routes (like /tab2) work correctly when users refresh the page or share links.
+      The script above converts the path into a query parameter that the main application can then process to restore the correct route.
+    </div>
+  </body>
+</html>

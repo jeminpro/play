@@ -6,7 +6,7 @@
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",
-    "build:pages": "tsc && vite build --mode github-pages",
+    "build:pages": "tsc && vite build --mode github-pages && copy 404-template.html dist\\404.html",
     "preview": "vite preview",
     "test.e2e": "cypress run",
     "test.unit": "vitest",
