@@ -47,9 +47,12 @@ import './theme/variables.css';
 
 setupIonicReact();
 
+// Get base path from Vite's import.meta.env.BASE_URL
+const basename = import.meta.env.BASE_URL.slice(0, -1); // Remove trailing slash
+
 const App: React.FC = () => (
   <IonApp>
-    <IonReactRouter>
+    <IonReactRouter basename={basename}>
       <IonTabs>
         <IonRouterOutlet>
           <Route exact path="/tab1">
